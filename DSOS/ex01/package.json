@@ -1,0 +1,21 @@
+{
+  "name": "ex01",
+  "version": "1.0.0",
+  "description": "'Linux 32-bit, A^B + C^D'",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodejs math-add.js"
+  },
+  "keywords": [
+    "'Linux",
+    "32-bit",
+    "A^B",
+    "+",
+    "C^D'"
+  ],
+  "author": "Oleh Kolomiets",
+  "license": "ISC",
+  "dependencies": {
+    "seneca": "^3.2.1"
+  }
+}
