@@ -70,7 +70,7 @@ fabric.properties
 .Trash-*
 .idea/
 ComputerSystemsDesign.iml
-src/
+
 .idea
 # Created by https://www.gitignore.io/api/node,linux
 
