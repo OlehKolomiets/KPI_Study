@@ -5,10 +5,8 @@ public class Main {
     public static void main(String... args) {
 
         long time = System.currentTimeMillis();
-        for (int i = 1; i < 7; i++) {
-            int clusterCount = (int) Math.pow(i, 2);
-            TorTopology topology = new TorTopology(clusterCount);
-//        CircleTopology topology = new CircleTopology(clusterCount);
+        for (int i = 0; i < 6; i++) {
+            HyperCubeTopology topology = new HyperCubeTopology(i);
             TopologyAnalyzer topologyAnalyzer =
                     new TopologyAnalyzer(topology.getNumberOfElements(), topology.generateTopology());
             System.out.println("\nnumber of processors : " + topology.getNumberOfElements());
