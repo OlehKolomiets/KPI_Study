@@ -1,3 +1,5 @@
+import core.Topology;
+
 /**
  * Created by oleh on 07.11.16.
  */
@@ -29,7 +31,7 @@ public class HyperCubeTopology extends Topology {
     }
 
     @Override
-    int[][] generateTopology() {
+    public int[][] generateTopology() {
         if (topologyOrder == 0) {
             return cluster;
         } else {

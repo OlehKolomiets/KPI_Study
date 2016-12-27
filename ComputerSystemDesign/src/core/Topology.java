@@ -1,3 +1,5 @@
+package core;
+
 /**
  * Created by oleh on 16.10.16.
  */
@@ -5,6 +7,7 @@ public abstract class Topology {
     protected int clusterNodes;
     protected int clusterCount;
     protected int numberOfElements;
+    // adjacency matrix
     protected int[][] topology;
 
     public Topology(int clusterNodes, int clusterCount) {
@@ -24,7 +27,11 @@ public abstract class Topology {
         }
     }
 
-    abstract int[][] generateTopology();
+    public int getClusterNodes() {
+        return clusterNodes;
+    }
+
+    public abstract int[][] generateTopology();
 
     protected int[][] transpose(int[][] src) {
         int[][] result = new int[src[0].length][src.length];
@@ -36,7 +43,7 @@ public abstract class Topology {
         return result;
     }
 
-    protected int[][] mergeMatrix(int[][] first, int[][] second) throws IllegalArgumentException {
+    public int[][] mergeMatrix(int[][] first, int[][] second) throws IllegalArgumentException {
         if (first.length != second.length || first[0].length != second[0].length) {
             throw new IllegalArgumentException("matrix should have the same size");
         }
