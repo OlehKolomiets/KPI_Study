@@ -1,6 +1,7 @@
 package coursework;
 
 import javafx.util.Pair;
+import utills.Utils;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -33,7 +34,7 @@ public class Routing {
                         .collect(Collectors.toList());
                 System.out.print("there are unachievable nodes:");
                 for (Integer unachievableNode : unachievableNodes) {
-                    System.out.print(String.format(" %d", unachievableNode));
+                    System.out.print(String.format(" %s", Utils.formatNode(nodes.get(unachievableNode))));
                 }
                 System.out.println("\n");
                 break;

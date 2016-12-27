@@ -1,5 +1,10 @@
 package utills;
 
+import coursework.Node;
+import javafx.util.Pair;
+
+import java.util.List;
+
 /**
  * Created by oleh on 27.12.16.
  */
@@ -17,5 +22,20 @@ public class Utils {
                 System.out.println("");
             }
         }
+    }
+
+    public static void printRoutePair(List<Node> nodes, Pair<Integer, Integer> pair) {
+        Node source = nodes.get(pair.getKey());
+        Node dest = nodes.get(pair.getValue());
+        System.out.println(String.format("%s -> %s",
+                formatNode(source),
+                formatNode(dest)));
+    }
+
+    public static String formatNode(Node node) {
+        return String.format("%d [%d.%d]",
+                node.getGeneralIndex(),
+                node.getClusterIndex(),
+                node.getClusterInnerIndex());
     }
 }
