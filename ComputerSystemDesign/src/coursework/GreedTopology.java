@@ -137,8 +137,6 @@ public class GreedTopology extends Topology {
             if (startPreviousCon >= 0) {
                 copyMatrix(topology, prevConnMatrix, (index * topologyOrder + i) * clusterNodes, startPreviousCon);
             }
-//            System.out.println("horizontal conn index: " + index);
-//            Utils.printMatrix(topology, 28);
         }
     }
 
@@ -155,9 +153,6 @@ public class GreedTopology extends Topology {
             if (startPreviousCon != -1) {
                 copyMatrix(topology, prevConnMatrix, (index + i * topologyOrder) * clusterNodes, startPreviousCon);
             }
-
-//            System.out.println("vertical conn index: " + index);
-//            Utils.printMatrix(topology, 28);
         }
     }
 }

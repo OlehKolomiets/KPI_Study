@@ -14,8 +14,7 @@ public class CourseWorkMain {
         GreedTopology topology = new GreedTopology(1);
         int[][] topologyMatrix = topology.generateTopology();
         List<Node> nodes = TopologyUtils.getNodes(topologyMatrix, topology.getClusterNodes());
-//        Utils.printMatrix(topologyMatrix, topology.getClusterNodes());
-        List<Integer> brokenNodes = Arrays.asList(8, 22, 20);
+        List<Integer> brokenNodes = Arrays.asList();
         nodes.stream()
                 .filter(node -> brokenNodes.contains(node.getGeneralIndex()))
                 .forEach(node -> node.setBroken(true));
